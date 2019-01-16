@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">I.M.C</string>
+
+    <string name="textview_bienvenido"> Bienvenido</string>
+    <string name="textview_elegir">Elige tu sexo:</string>
+    <string name="checkbox_hombre">Hombre</string>
+    <string name="checkbox_mujer">Mujer</string>
+    <string name="button_siguiente">Siguiente</string>
+    <string name="toast_incorret">Elije entre las dos opciones</string>
+    <string name="textview_rellenar"> Rellena tus datos:</string>
+    <string name="editText_peso"> Escribe tu peso(Kg):</string>
+    <string name="editText_altura"> Escribe tu altura(m):</string>
+    <string name="textview_imc"> I.M.C</string>
+    <string name="textview_result"> Resultado</string>
+    <string name="button_calcular">Calcular</string>
+    <string name="toast_num_incorret">Numero incorrecto</string>
+
+
+</resources>
