@@ -6,10 +6,11 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Main2Activity extends AppCompatActivity {
+public class HombreActivity extends AppCompatActivity {
 
     public  static final String LOG_TAG = "";
 
@@ -18,12 +19,13 @@ public class Main2Activity extends AppCompatActivity {
     private Button button2;
     private TextView textView1;
     private TextView textView2;
+    private ImageView imageView1;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_hombre);
         Log.d(LOG_TAG,"muestra la activity");
 
         editText1 = (EditText) findViewById(R.id.edit_1);
@@ -31,6 +33,7 @@ public class Main2Activity extends AppCompatActivity {
         button2 = (Button) findViewById(R.id.bottom2);
         textView1 = (TextView) findViewById(R.id.text_2);
         textView2 = (TextView) findViewById(R.id.text_3);
+        imageView1 = (ImageView) findViewById(R.id.imagen);
 
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,19 +61,28 @@ public class Main2Activity extends AppCompatActivity {
 
             if (resul < 16) {
                 textView2.setText("Desnutrido");
-            } else if (resul >= 16 && resul < 18) {
+                imageView1.setImageResource(R.drawable.desnutridohombre);
+
+            } else if (resul >= 16 && resul < 18.5) {
                 textView2.setText("Delgado");
-            } else if (resul >= 18 && resul < 28) {
+                imageView1.setImageResource(R.drawable.delgadohombre);
+
+            } else if (resul >= 18.5 && resul < 24.9) {
                 textView2.setText("Ideal");
-            } else if (resul >= 28 && resul < 31) {
+                imageView1.setImageResource(R.drawable.idealhombre);
+
+            } else if (resul >= 24.9 && resul < 31.9) {
                 textView2.setText("Sobrepeso");
-            } else if (resul >= 31 && resul < 36) {
+                imageView1.setImageResource(R.drawable.sobrepesohombre);
+
+            } else if (resul >= 31.9 && resul < 60) {
                 textView2.setText("Obeso");
+                imageView1.setImageResource(R.drawable.obesohombre);
             }
 
         }catch (Exception e){
 
-            Toast.makeText(Main2Activity.this,R.string.toast_num_incorret,Toast.LENGTH_SHORT).show();
+            Toast.makeText(HombreActivity.this,R.string.toast_num_incorret,Toast.LENGTH_SHORT).show();
 
         }
 

@@ -9,6 +9,7 @@
 
     <TextView
         android:id="@+id/text_1.1"
+        android:textSize="24dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -37,6 +38,7 @@
 
     <Button
         android:layout_gravity="center"
+        android:textSize="22dp"
         android:id="@+id/bottom2.2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -44,6 +46,7 @@
 
     <TextView
         android:id="@+id/text_2.2"
+        android:textSize="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -53,10 +56,17 @@
 
     <TextView
         android:id="@+id/text_3.3"
+        android:textSize="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="@string/textview_result"
         android:textColor="@android:color/holo_blue_bright" />
+
+    <ImageView
+        android:id="@+id/imagen2"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

@@ -21,6 +21,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
+
         Log.d(LOG_TAG,"muestra la activity");
 
         checkBox1 = (CheckBox) findViewById(R.id.checkBox);
@@ -30,8 +34,6 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Toast.makeText(MainActivity.this,R.string.toast_incorret,Toast.LENGTH_SHORT).show();
 
 
                     if (checkBox1.isChecked() == true && checkBox2.isChecked() == false) {
@@ -47,13 +49,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void intentHombre(){
         Log.d(LOG_TAG,"se ejecuta la siguiente activity");
-        Intent next = new Intent(this,Main2Activity.class);
+        Intent next = new Intent(this,HombreActivity.class);
         startActivity(next);
     }
 
     public void intentMujer(){
         Log.d(LOG_TAG,"se ejecuta la siguiente activity");
-        Intent next = new Intent(this,Main3Activity.class);
+        Intent next = new Intent(this,MujerActivity.class);
         startActivity(next);
     }
 }
