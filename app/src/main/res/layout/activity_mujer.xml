@@ -8,7 +8,7 @@
 
 
     <TextView
-        android:id="@+id/text_1.1"
+        android:id="@+id/tvFill.1"
         android:textSize="24dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -17,7 +17,7 @@
         android:textColor="@android:color/holo_orange_light" />
 
     <EditText
-        android:id="@+id/edit_1.1"
+        android:id="@+id/etWeight.1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -27,7 +27,7 @@
         android:textColorHint="@android:color/background_light" />
 
     <EditText
-        android:id="@+id/edit_2.2"
+        android:id="@+id/etHeight.1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -37,15 +37,15 @@
         android:textColorHint="@android:color/background_light" />
 
     <Button
+        android:id="@+id/btCalculate.1"
         android:layout_gravity="center"
         android:textSize="22dp"
-        android:id="@+id/bottom2.2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button_calcular" />
 
     <TextView
-        android:id="@+id/text_2.2"
+        android:id="@+id/tvImc.1"
         android:textSize="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -55,7 +55,7 @@
         android:textColor="@android:color/holo_blue_bright" />
 
     <TextView
-        android:id="@+id/text_3.3"
+        android:id="@+id/tvResult.1"
         android:textSize="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -64,7 +64,7 @@
         android:textColor="@android:color/holo_blue_bright" />
 
     <ImageView
-        android:id="@+id/imagen2"
+        android:id="@+id/ivImage.1"
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />

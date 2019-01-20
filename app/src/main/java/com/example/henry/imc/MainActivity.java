@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    public  static final String LOG_TAG = "";
+    public  static final String LOG_TAG = "MainActivity";
 
     private CheckBox checkBox1;
     private CheckBox checkBox2;
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setIcon(R.mipmap.ic_launcher);
 
-        Log.d(LOG_TAG,"muestra la activity");
+        Log.d(LOG_TAG,"Show the activity...");
 
         checkBox1 = (CheckBox) findViewById(R.id.checkBox);
         checkBox2 = (CheckBox) findViewById(R.id.checkBox2);
