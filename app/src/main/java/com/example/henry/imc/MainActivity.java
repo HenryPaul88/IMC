@@ -13,9 +13,9 @@ public class MainActivity extends AppCompatActivity {
 
     public  static final String LOG_TAG = "MainActivity";
 
-    private CheckBox checkBox1;
-    private CheckBox checkBox2;
-    private Button button;
+    private CheckBox cbMan;
+    private CheckBox cbWoman;
+    private Button btNext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,19 +27,19 @@ public class MainActivity extends AppCompatActivity {
 
         Log.d(LOG_TAG,"Show the activity...");
 
-        checkBox1 = (CheckBox) findViewById(R.id.checkBox);
-        checkBox2 = (CheckBox) findViewById(R.id.checkBox2);
-        button = (Button) findViewById(R.id.bottom);
+        cbMan = (CheckBox) findViewById(R.id.cbMan);
+        cbWoman = (CheckBox) findViewById(R.id.cbWoman);
+        btNext = (Button) findViewById(R.id.btNext);
 
-        button.setOnClickListener(new View.OnClickListener() {
+        btNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
 
-                    if (checkBox1.isChecked() == true && checkBox2.isChecked() == false) {
-                        intentHombre();
-                    }else if(checkBox1.isChecked() == false && checkBox2.isChecked() == true){
-                        intentMujer();
+                    if (cbMan.isChecked() == true && cbWoman.isChecked() == false) {
+                        intentMan();
+                    }else if(cbMan.isChecked() == false && cbWoman.isChecked() == true){
+                        intentWoman();
                     }else {
                         Toast.makeText(MainActivity.this, R.string.toast_incorret, Toast.LENGTH_SHORT).show();
                     }
@@ -47,13 +47,13 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void intentHombre(){
+    public void intentMan(){
         Log.d(LOG_TAG,"se ejecuta la siguiente activity");
         Intent next = new Intent(this,HombreActivity.class);
         startActivity(next);
     }
 
-    public void intentMujer(){
+    public void intentWoman(){
         Log.d(LOG_TAG,"se ejecuta la siguiente activity");
         Intent next = new Intent(this,MujerActivity.class);
         startActivity(next);
