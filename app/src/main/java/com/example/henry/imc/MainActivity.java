@@ -22,8 +22,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
+
 
         Log.d(LOG_TAG,"Show the activity...");
 
@@ -36,9 +35,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
 
-                    if (cbMan.isChecked() == true && cbWoman.isChecked() == false) {
+                    if (cbMan.isChecked() && !cbWoman.isChecked()) {
                         intentMan();
-                    }else if(cbMan.isChecked() == false && cbWoman.isChecked() == true){
+                    }else if(!cbMan.isChecked() && cbWoman.isChecked()){
                         intentWoman();
                     }else {
                         Toast.makeText(MainActivity.this, R.string.toast_incorret, Toast.LENGTH_SHORT).show();

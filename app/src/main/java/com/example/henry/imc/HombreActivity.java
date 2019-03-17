@@ -17,7 +17,6 @@ public class HombreActivity extends AppCompatActivity {
 
     private EditText etWeight;
     private EditText etHeight;
-    private Button btCalculate;
     private TextView tvImc;
     private TextView tvResult;
     private ImageView ivImage;
@@ -29,13 +28,16 @@ public class HombreActivity extends AppCompatActivity {
         setContentView(R.layout.activity_hombre);
         Log.d(LOG_TAG, "Show the activity...");
 
-        etWeight = (EditText) findViewById(R.id.etWeight);
-        etHeight = (EditText) findViewById(R.id.etHeight);
-        btCalculate = (Button) findViewById(R.id.btCalculate);
-        tvImc = (TextView) findViewById(R.id.tvImc);
-        tvResult = (TextView) findViewById(R.id.tvResult);
-        ivImage = (ImageView) findViewById(R.id.ivImage);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
 
+        etWeight = findViewById(R.id.etWeight);
+        etHeight = findViewById(R.id.etHeight);
+        tvImc = findViewById(R.id.tvImc);
+        tvResult = findViewById(R.id.tvResult);
+        ivImage = findViewById(R.id.ivImage);
+
+        Button btCalculate = (Button) findViewById(R.id.btCalculate);
         btCalculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

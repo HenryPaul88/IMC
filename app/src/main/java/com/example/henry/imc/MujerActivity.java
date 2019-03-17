@@ -17,7 +17,6 @@ public class MujerActivity extends AppCompatActivity {
 
     private EditText etWeight;
     private EditText etHeight;
-    private Button btCalculate;
     private TextView tvImc;
     private TextView tvResult;
     private ImageView ivImage;
@@ -29,12 +28,16 @@ public class MujerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_mujer);
         Log.d(LOG_TAG,"muestra la activity");
 
-        etWeight = (EditText) findViewById(R.id.etWeight_1);
-        etHeight = (EditText) findViewById(R.id.etHeight_1);
-        btCalculate = (Button) findViewById(R.id.btCalculate_1);
-        tvImc = (TextView) findViewById(R.id.tvImc_1);
-        tvResult = (TextView) findViewById(R.id.tvResult_1);
-        ivImage = (ImageView) findViewById(R.id.ivImage_1);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
+
+        etWeight = findViewById(R.id.etWeight_1);
+        etHeight = findViewById(R.id.etHeight_1);
+        tvImc = findViewById(R.id.tvImc_1);
+        tvResult = findViewById(R.id.tvResult_1);
+        ivImage = findViewById(R.id.ivImage_1);
+
+        Button btCalculate = findViewById(R.id.btCalculate_1);
 
         btCalculate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,6 +46,7 @@ public class MujerActivity extends AppCompatActivity {
                float weight = Float.parseFloat(etWeight.getText().toString());
                float height = Float.parseFloat(etHeight.getText().toString());
                float result = ImcCalculator.calculateImc(weight, height);
+
                setFields(result);
 
 
@@ -51,7 +55,10 @@ public class MujerActivity extends AppCompatActivity {
     }
 
     private void setFields(float result) {
+
         tvImc.setText(String.format("I.M.C es: %s", result));
+
+
         if (result < 16) {
             tvResult.setText("Desnutrido");
             ivImage.setImageResource(R.drawable.destrunidamujer);
